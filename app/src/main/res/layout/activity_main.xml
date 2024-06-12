@@ -13,11 +13,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Количество часов:"
+        android:text="Время работы"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editTextHours"
+        android:hint="Введите количество часов"  android:text="0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number" />
@@ -33,21 +34,21 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_blue_dark"
             android:checked="true"
-            android:text="автомашина (2000 руб./час)" />
+            android:text="Машина (2к руб./час)" />
 
         <RadioButton
             android:id="@+id/radioMinivan"
             android:layout_width="231dp"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_green_dark"
-            android:text="Минивэн (2500 руб./час)" />
+            android:text="Минивэн (2,5к руб./час)" />
 
         <RadioButton
             android:id="@+id/radioBus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_red_dark"
-            android:text="автобус (3500 руб./час)" />
+            android:text="Автобус (3,5к руб./час)" />
     </RadioGroup>
 
     <Button
