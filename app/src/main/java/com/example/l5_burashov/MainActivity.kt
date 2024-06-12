@@ -1,5 +1,6 @@
 package com.example.l5_burashov
 
+// импорт необходимых классов
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Метод для подсчета стоимости аренды
     private fun calculateCost() {
         val hoursStr = editTextHours.text.toString()
         if (hoursStr.isEmpty()) {
