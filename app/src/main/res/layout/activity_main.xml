@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:rotation="0"
+    android:rotationX="0"
+    android:visibility="visible">
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,25 +25,28 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="211dp">
 
         <RadioButton
             android:id="@+id/radioCar"
-            android:layout_width="wrap_content"
+            android:layout_width="228dp"
             android:layout_height="wrap_content"
-            android:text="автомашина (2000 руб./час)"
-            android:checked="true" />
+            android:background="@android:color/holo_blue_dark"
+            android:checked="true"
+            android:text="автомашина (2000 руб./час)" />
 
         <RadioButton
             android:id="@+id/radioMinivan"
-            android:layout_width="wrap_content"
+            android:layout_width="231dp"
             android:layout_height="wrap_content"
-            android:text="минивэн (2500 руб./час)" />
+            android:background="@android:color/holo_green_dark"
+            android:text="Минивэн (2500 руб./час)" />
 
         <RadioButton
             android:id="@+id/radioBus"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
             android:text="автобус (3500 руб./час)" />
     </RadioGroup>
 
@@ -46,5 +54,12 @@
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OK" />
+        android:background="#3F51B4"
+        android:rotation="0"
+        android:text="Расчитать стоимость"
+        app:icon="@android:drawable/arrow_up_float"
+        app:iconTint="#873131"
+        app:rippleColor="#71A535"
+        app:strokeColor="#968816"
+        tools:visibility="visible" />
 </LinearLayout>
