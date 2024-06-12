@@ -4,10 +4,10 @@ package com.example.l5_burashov
 // импорт необходимых классов
 import android.content.Intent  // Класс для передачи данных между активити
 import android.os.Bundle       // Класс для хранения данных состояния активности
-import android.widget.Button  // Класс для кнопки
-import android.widget.EditText // Класс для поля ввода текста
+import android.widget.Button
+import android.widget.EditText
 import android.widget.RadioGroup // Класс для группы радиокнопок
-import androidx.appcompat.app.AppCompatActivity // Базовый класс для активити в Android
+import androidx.appcompat.app.AppCompatActivity
 
 // Класс описывает главную активность приложения
 class MainActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     //  метод вызывается при создании активности
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main) // Установить макет для активности
+        setContentView(R.layout.activity_main) // Устанавливаем макет для активности
 
         // Инициализация полей ссылками на элементы интерфейса
         editTextHours = findViewById(R.id.editTextHours)
@@ -41,8 +41,8 @@ class MainActivity : AppCompatActivity() {
 
         // Проверка ввода пользователем количества часов
         if (hoursStr.isEmpty()) {
-            editTextHours.error = "Введите количество часов"  // Отобразить сообщение об ошибке
-            return  // Завершить выполнение метода, если ввод пустой
+            editTextHours.error = "Введите количество часов"
+            return
         }
 
         // Преобразовать введенное количество часов из строки в число
@@ -53,9 +53,9 @@ class MainActivity : AppCompatActivity() {
 
         // Определение стоимости в час в зависимости от выбранного типа транспорта
         when (radioGroup.checkedRadioButtonId) {
-            R.id.radioCar -> costPerHour = 2000  // Легковой автомобиль - 2000 рублей/час
-            R.id.radioMinivan -> costPerHour = 2500  // Минивен - 2500 рублей/час
-            R.id.radioBus -> costPerHour = 3500  // Автобус - 3500 рублей/час
+            R.id.radioCar -> costPerHour = 2000
+            R.id.radioMinivan -> costPerHour = 2500
+            R.id.radioBus -> costPerHour = 3500
         }
 
         // Рассчитать общую стоимость аренды (количество часов * стоимость в час)
@@ -63,7 +63,8 @@ class MainActivity : AppCompatActivity() {
 
         // Создать новый Intent для запуска активности результата
         val intent = Intent(this, ResultActivity::class.java).apply {
-            putExtra("totalCost", totalCost) // Добавить данные о общей стоимости в Intent
+            // Добавить данные об общей стоимости в Intent
+            putExtra("totalCost", totalCost)
         }
 
         // Запустить активность результата с передачей данных
